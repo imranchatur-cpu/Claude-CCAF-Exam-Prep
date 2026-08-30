@@ -17,6 +17,7 @@ Written against the public **Exam Guide v1.0 (July 2026)**. These are original p
 | `mock-exam-p2.html` | Professional Mock 2 — harder set, 63 all-new questions |
 | `flashcards.html` | Retrieval deck — active-recall cards across all five Foundations domains |
 | `recall-sheet.html` | One-page Q→A crib (API + Claude Code + Agent SDK) with a Quiz mode |
+| `STUDY-NOTES.md` | Condensed study guide — every domain's key concepts, discriminators, and common traps |
 
 Each mock exam runs a full timed simulator: an intro screen, a 120-minute countdown, a scenario- or domain-grouped question navigator, question flagging, a score ring with a per-domain breakdown, and a full review showing the correct answer and explanation on every question. Progress and flashcard state are saved in your browser (`localStorage`) — nothing leaves your machine.
 
@@ -129,7 +130,9 @@ Both Professional mocks use the same engine and look as the Foundations mocks �
 
 ---
 
-## Reference — Recall Sheet
+## Reference — Study notes & recall sheet
+
+**[Read `STUDY-NOTES.md`](STUDY-NOTES.md)** — a condensed study guide covering every Foundations domain (D1–D5), a cross-cutting reference section (hooks, the enforcement ladder, the placement hierarchy, `tool_choice`, the error taxonomy, Batches, caching, trap patterns), the exam-vs-current "drift" table, and a Professional (CCAR-P) domain map.
 
 **[Open `recall-sheet.html`](recall-sheet.html)** — a one-page, exam-style Q→A crib covering the API, Claude Code, and the Agent SDK, with a Quiz mode and the turn-lifecycle flow.
 
