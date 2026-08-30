@@ -1,8 +1,11 @@
-# Claude Certified Architect — Study Notes
+# Claude Certified Architect — Foundations (CCAF) Study Notes
 
-A condensed, exam-focused study guide for the **Claude Certified Architect — Foundations (CCAR-F)** exam, with a section on the **Professional (CCAR-P)** domains at the end. These notes distill the concepts, discriminators, and common traps that the exam tests, organized by domain.
+A condensed, exam-focused study guide for the **Claude Certified Architect — Foundations (CCAF)** exam. These notes distill the concepts, discriminators, and common traps that the exam tests, organized by domain.
 
 Written against the public **Exam Guide v1.0 (July 2026)**. Where the guide differs from the current product, a **Drift** section at the end lists the differences — answer the *exam-guide* version on test day.
+
+> ### ⚠️ The real exam is harder than any practice set
+> These notes and the mock exams alongside them build fluency; they do **not** mirror the difficulty of the live CCAF exam. The real thing is longer, denser, and **scenario-based** — three of four options look reasonable and only one fixes the root cause, the deciding detail is buried in the stem, and the same concept comes back from an angle you haven't drilled. Learn the *reasoning* below cold, not just the conclusions.
 
 > Not affiliated with or endorsed by Anthropic. Original study material written against the public exam guide.
 
@@ -308,36 +311,10 @@ Answer the **exam** version on test day; the current-product note is for real-wo
 
 ---
 
-## Professional exam (CCAR-P) — domain map
-
-The Professional exam is broader and more scenario-heavy, weighted across seven domains. The recurring principles below carry most of the weight; the two Professional mock exams in this repo drill them.
-
-| # | Domain | Weight |
-|---|---|---|
-| 1 | Solution Design & Architecture | 17% |
-| 2 | Claude Models, Prompting & Context Engineering | 13% |
-| 3 | Integration | 19% |
-| 4 | Evaluation, Testing & Optimization | 16% |
-| 5 | Governance, Safety & Risk Management | 14% |
-| 6 | Stakeholder Communication & Lifecycle Management | 14% |
-| 7 | Developer Productivity & Operational Enablement | 7% |
-
-**Recurring seams the Professional exam discriminates on:**
-
-- **Root cause over symptom.** The answer that adds a log, a confirmation, or "a stronger prompt" is usually the distractor.
-- **Least privilege at the source.** Remove the capability; don't compensate for it downstream.
-- **Humans on the irreversible.** No answer that strips oversight for speed is correct; a rubber-stamp "human-in-the-loop" is not oversight.
-- **Treat retrieved/external content as untrusted.** Watch for the exfiltration path (untrusted input + private data + an outbound tool); enforce access control at retrieval; scope by tenant/user.
-- **When *not* to use an LLM.** Sub-50 ms real-time scoring, deterministic arithmetic, and "the model is not a vector index."
-- **Guard against silent quality drift** on a model upgrade with a version-attributed eval set that gates promotion. Accepted ≠ correct; stratify before trusting an aggregate.
-- **Measure before you assert.** Bias evaluation is required even without fine-tuning; an anecdote is not a distribution.
-- **Define targets before you build**, and name the trade-off — hand stakeholders real options (defer / descope / extend).
-- **Config scope & secrets.** Managed settings individuals can't override, project scope under version control, personal preferences in user scope, and credentials never in a committed file.
-
----
-
 ## Sources & disclaimer
 
 These notes are anchored to **Exam Guide v1.0 (July 2026)** and keep all model references generic (smallest / mid-tier / frontier). They deliberately exclude product features that post-date the exam window. Practice exams and flashcards that exercise this material live alongside this file — see the [README](README.md).
+
+**Study the reasoning, not the answer key.** The live CCAF exam re-tests each of these ideas through fresh scenarios that are harder than any mock here. If you can state *why* the wrong options are wrong — which layer they fix, which constraint they miss — you're ready for the version you haven't seen.
 
 > Original study material written against the public exam guide. Not affiliated with or endorsed by Anthropic, and not drawn from the live exam. No study resource guarantees a pass.
